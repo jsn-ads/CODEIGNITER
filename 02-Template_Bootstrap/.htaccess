@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /JOB/PROJETOSWEB/CodeIgniter/02-Template_Bootstrap/index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ /PROJETOS/04-CODEIGNITER/02-Template_Bootstrap/index.php?url=$1 [QSA,L]
