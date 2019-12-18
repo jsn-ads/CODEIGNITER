@@ -36,8 +36,8 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <button id="btn-login" class="btn btn-block">Login</button>
-                                    <span class="help-block"></span>
                                 </div>
+                                <span class="help-block"></span>
                             </div>
                         </div>
                         

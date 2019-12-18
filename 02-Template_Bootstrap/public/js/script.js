@@ -1,4 +1,4 @@
-const BASE_URL = "localhost/PROJETOS/04-CODEIGNITER/02-Template_Bootstrap/";
+const BASE_URL = "http://localhost/PROJETOS/04-CODEIGNITER/02-Template_Bootstrap/";
 
 function clearErrors(){
     $('.has-error').removeClass('has-error');
@@ -6,15 +6,15 @@ function clearErrors(){
 }
 
 function showErrors(error_list){
-    
+
     clearErrors();
 
     $.each(error_list, function(id,message){
         $(id).parent().parent().addClass("has-error");
-        $(id).parent().siblings(".help-block").html(message);
+        $(id).parent().siblings(".help-block").html(message)
     })
 }
 
 function loadingImg(message = ""){
-    return "<i class='fa fa-circle-o-notch fa-spin'></i>&nbsp;";
+    return "<i class='fa fa-circle-o-notch fa-spin'></i>&nbsp;"+message;
 }

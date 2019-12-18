@@ -11,7 +11,7 @@
         public function get_login($login){
 
             $this->db
-                 ->select('id, senha , nome, email')
+                 ->select('id, login, senha, nome, email')
                  ->from('user')
                  ->where('login',$login);   
             // get() faz o mesma função do execute();
