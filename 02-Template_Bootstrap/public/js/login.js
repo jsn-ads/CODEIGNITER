@@ -7,13 +7,13 @@ $(function(){
             data: $(this).serialize(),
             beforeSend: function() {
                 clearErrors();
-                $('#btn_login').parent().siblings('help-block').html(loadingImg("Verificando..."))
+                $('#btn_login').parent().siblings('.help-block').html(loadingImg("Verificando..."))
             },
             success: function(json){
         
                 if(json["status"] == 1){
                     clearErrors();
-                    $('#btn_login').parent().siblings('help-block').html(loadingImg("Logando..."));
+                    $('#btn_login').parent().siblings('.help-block').html(loadingImg("Logando..."));
                     window.location = BASE_URL + "LoginController";
                 }else{
                     showErrors(json["error_list"]);

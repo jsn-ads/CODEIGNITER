@@ -10,15 +10,26 @@ class LoginController extends CI_Controller{
 
     public function index(){
 
-        $data = array(
-            "scripts" => array(
-                'script.js',
-                'login.js'
-            )
-        );
+        if($this->session->userdata("login")){
+            $this->template->show("restrict.php");
+        }else{
 
-        $this->template->show('login', $data);
+            $data = array(
+                "scripts" => array(
+                    'script.js',
+                    'login.js'
+                )
+            );
     
+            $this->template->show('login', $data);
+
+        }
+    }
+
+    public function logoff(){
+
+        $this->session->sess_destroy();
+        header("Location: ".base_url()."LoginController");
     }
 
     public function ajax_login(){
